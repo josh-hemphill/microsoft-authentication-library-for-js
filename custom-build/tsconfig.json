@@ -1,0 +1,34 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"target": "es2017",
+		"moduleResolution": "node",
+		"strict": true,
+		"declaration": true,
+		"noUnusedLocals": true,
+		"outDir": "dist",
+		"declarationDir": "dist",
+		"lib": [
+			"esnext"
+		],
+		"types": [
+			"node"
+		],
+		"sourceMap": false,
+		"noEmitOnError": true,
+		"paths": {
+			"@azure/msal-common": [
+				"../lib/msal-common/src/index.ts"
+			],
+		},
+	},
+	"include": [
+		"../lib/msal-common/src/**/*",
+		"../lib/msal-node/src/**/*",
+	],
+	"exclude": [
+		"**/*.test.*",
+		"**/dist",
+		"**/node_modules"
+	]
+}

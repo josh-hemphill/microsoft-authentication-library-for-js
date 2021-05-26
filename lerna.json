@@ -5,7 +5,8 @@
       "scope": [
         "msal",
         "@azure/msal-common",
-        "@azure/msal-node"
+        "@azure/msal-node",
+        "custom-build"
       ],
       "stream": true
     },
@@ -13,13 +14,16 @@
         "scope": [
             "msal",
             "@azure/msal-common",
-            "@azure/msal-node"
+            "@azure/msal-node",
+            "custom-build"
         ],
         "stream": true
     }
   },
   "packages": [
-    "lib/*"
+    "lib/msal-common",
+    "lib/msal-node",
+    "custom-build"
   ],
   "version": "independent",
   "concurrency": 3

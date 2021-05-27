@@ -1,5 +1,6 @@
 import ts from '@wessberg/rollup-plugin-ts';
 const dist = './dist/';
+import inject from '@rollup/plugin-inject';
 /* const input = 'src/lib/index.ts'; */
 
 export default [{
@@ -13,6 +14,10 @@ export default [{
 			],
 			browserslist: false,
 			tsconfig: '../tsconfig.json',
+		}),
+		inject({
+			Buffer: ['buffer', 'Buffer'],
+			process: ['process', 'process'],
 		}),
 	],
 	output: [
